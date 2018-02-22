@@ -1,5 +1,5 @@
 # js-leet
-Implements leetspeak converter at JavaScript. 
+Implements leetspeak converter at JavaScript. <br>
 This is created to learn JavaScript.
 
 ## Example
