@@ -6,13 +6,13 @@ This is created to learn JavaScript.
 
 ```bash
 $node
-> const leet = require('./leet')
+> const { getLeet }  = require('./leet')
 undefined
-> leet.getLeet('hello')
+> getLeet('hello')
 '!-!3|_1<>'
-> leet.getLeet('1234567890')
+> getLeet('1234567890')
 '1234567890'
-> leet.getLeet('he11o')
+> getLeet('he11o')
 ':-:€11<>'
 ```
 
