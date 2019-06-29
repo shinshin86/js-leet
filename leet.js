@@ -27,7 +27,7 @@
     Y = ["Y","j","`/","Ч","7","\\|/","¥"]
     Z = ["Z","2","7_","-/_","%",">_","s","~/_","-\\_","-|_"]
 
-    LEET_MAP_LIST = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
+    const LEET_MAP_LIST = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
     return LEET_MAP_LIST
  }
 
@@ -35,7 +35,7 @@ const randRange = function (min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-exports.getLeet = function getLeet(inputs) {
+module.exports.getLeet = function (inputs) {
   const leetList = getLeetList()
   let leetIdx = []
   let res = ''
@@ -44,7 +44,7 @@ exports.getLeet = function getLeet(inputs) {
     leetIdx.push(v[0])
   })
 
-  li = inputs.split('')
+  const li = inputs.split('')
   li.forEach((v) => {
     if(leetIdx.indexOf(v.toUpperCase()) == -1) {
       res += v
