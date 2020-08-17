@@ -22,3 +22,13 @@ undefined
 
 [Wikipedia(Ja) - Leet](https://ja.wikipedia.org/wiki/Leet)
 
+
+
+## Development
+
+Test
+
+```bash
+yarn test
+```
+
