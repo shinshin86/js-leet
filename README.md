@@ -1,4 +1,5 @@
 # js-leet
+
 Implements leetspeak converter at JavaScript. <br>
 This is created to learn JavaScript.
 
@@ -16,13 +17,9 @@ undefined
 ':-:€11<>'
 ```
 
-
-
 ## Reference
 
 [Wikipedia(Ja) - Leet](https://ja.wikipedia.org/wiki/Leet)
-
-
 
 ## Development
 
@@ -31,4 +28,3 @@ Test
 ```bash
 yarn test
 ```
-
