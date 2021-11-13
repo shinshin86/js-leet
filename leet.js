@@ -1,5 +1,5 @@
   // reference : https://ja.wikipedia.org/wiki/Leet
- function getLeetList() { 
+ const getLeetList = () => { 
     A = ["A","4","/\\","@","/-\\", "^", "aye", "(L","Д"]
     B = ["B","I3","8","13","|3","ß","P>","|:","!3","(3","/3",")3","|-]","j3"]
     C = ["C","[","¢","<","(","©"]
@@ -27,32 +27,33 @@
     Y = ["Y","j","`/","Ч","7","\\|/","¥"]
     Z = ["Z","2","7_","-/_","%",">_","s","~/_","-\\_","-|_"]
 
-    const LEET_MAP_LIST = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]
-    return LEET_MAP_LIST
+    return [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z];
  }
 
-const randRange = function (min, max) {
+const randRange = (min, max) => {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-module.exports.getLeet = function (inputs) {
+module.exports.getLeet = (inputs) => {
   const leetList = getLeetList()
-  let leetIdx = []
-  let res = ''
+  let leetIdxList = []
 
   leetList.forEach((v) => {
-    leetIdx.push(v[0])
+    leetIdxList.push(v[0])
   })
 
+  let res = ''
   const li = inputs.split('')
+
   li.forEach((v) => {
-    if(leetIdx.indexOf(v.toUpperCase()) == -1) {
+    if(!leetIdxList.includes(v.toUpperCase())) {
       res += v
     } else {
-      const idx = leetIdx.indexOf(v.toUpperCase())
+      const idx = leetIdxList.indexOf(v.toUpperCase())
       const n = randRange(1, leetList[idx].length - 1)
       res += leetList[idx][n]
     }
   })
+
   return res
 }
