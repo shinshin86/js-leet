@@ -1,4 +1,9 @@
-// reference : https://ja.wikipedia.org/wiki/Leet
+/**
+ * I use the characters listed on the page here.
+ * URL: https://ja.wikipedia.org/wiki/Leet
+ * Since it is taken from Wikipedia, the license is CC-BY-SA 3.0 only for this part (getLeetList).
+ * @returns {Array<string>}
+ */
 const getLeetList = () => {
   A = ['A', '4', '/\\', '@', '/-\\', '^', 'aye', '(L', 'Д'];
   B = ['B', 'I3', '8', '13', '|3', 'ß', 'P>', '|:', '!3', '(3', '/3', ')3', '|-]', 'j3'];
@@ -30,10 +35,19 @@ const getLeetList = () => {
   return [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z];
 };
 
+/**
+ * @param {number} min
+ * @param {number} max
+ * @returns {number}
+ */
 const randRange = (min, max) => {
   return Math.floor(Math.random() * (max - min) + min);
 };
 
+/**
+ * @param {string} inputs
+ * @returns {string}
+ */
 module.exports.getLeet = (inputs) => {
   const leetList = getLeetList();
   let leetIdxList = [];
